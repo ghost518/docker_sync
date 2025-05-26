@@ -5,9 +5,7 @@ set -eux
 TARGET_REGISTRY="registry.cn-hangzhou.aliyuncs.com"
 TARGET_NAMESPACE="ghost518-acr"
 IMAGES=(
-  "langgenius/dify-api:1.3.0"
-  "langgenius/dify-web:1.3.0" 
-  "langgenius/dify-plugin-daemon:0.0.8-local"
+  "confluentinc/cp-zookeeper:7.4.0"
 )
 
 for image in "${IMAGES[@]}"; do
