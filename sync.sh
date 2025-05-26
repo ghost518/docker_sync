@@ -4,9 +4,11 @@ set -eux
 
 TARGET_REGISTRY="registry.cn-hangzhou.aliyuncs.com"
 TARGET_NAMESPACE="ghost518-acr"
-IMAGES=(
-  "confluentinc/cp-kafka:7.4.0"
-)
+IMAGES=()
+
+while IFS= read -r line; do
+    IMAGES+=("$line")
+done < image_list.txt
 
 for image in "${IMAGES[@]}"; do
     # 拉取镜像
