@@ -5,7 +5,7 @@ set -eux
 TARGET_REGISTRY="registry.cn-hangzhou.aliyuncs.com"
 TARGET_NAMESPACE="ghost518-acr"
 IMAGES=(
-  "confluentinc/cp-zookeeper:7.4.0"
+  "confluentinc/cp-kafka:7.4.0"
 )
 
 for image in "${IMAGES[@]}"; do
